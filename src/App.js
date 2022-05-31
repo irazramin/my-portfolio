@@ -1,10 +1,9 @@
-import './App.css';
 import Home from './Components/Pages/Home/Home';
 import Header from './Components/Shared/Header';
 
 function App() {
   return (
-    <div className=''>
+    <div className='bg-stone-50'>
      <Header/>
      <Home/>
     </div>

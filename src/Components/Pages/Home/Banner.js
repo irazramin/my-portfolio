@@ -1,140 +1,55 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
-const Banner = () => {
-     const particlesInit = async (main) => {
-       console.log(main);
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-       // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-       // starting from v2 you can add only the features you need reducing the bundle size
-       await loadFull(main);
-     };
+const Banner = () => {
+     
   return (
-    <div>
-      <Particles
-        id='tsparticles'
-        init={particlesInit}
-        options={{
-          fullScreen: {
-            enable: true,
-            zIndex: 1,
-          },
-          particles: {
-            number: {
-              value: 10,
-              density: {
-                enable: false,
-                value_area: 800,
-              },
-            },
-            color: {
-              value: '#fff',
-            },
-            shape: {
-              type: 'star',
-              options: {
-                sides: 5,
-              },
-            },
-            opacity: {
-              value: 0.8,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false,
-              },
-            },
-            size: {
-              value: 4,
-              random: false,
-              anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false,
-              },
-            },
-            rotate: {
-              value: 0,
-              random: true,
-              direction: 'clockwise',
-              animation: {
-                enable: true,
-                speed: 5,
-                sync: false,
-              },
-            },
-            line_linked: {
-              enable: true,
-              distance: 600,
-              color: '#ffffff',
-              opacity: 0.4,
-              width: 2,
-            },
-            move: {
-              enable: true,
-              speed: 2,
-              direction: 'none',
-              random: false,
-              straight: false,
-              out_mode: 'out',
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200,
-              },
-            },
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: ['grab'],
-              },
-              onclick: {
-                enable: false,
-                mode: 'bubble',
-              },
-              resize: true,
-            },
-            modes: {
-              grab: {
-                distance: 400,
-                line_linked: {
-                  opacity: 1,
-                },
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3,
-              },
-              repulse: {
-                distance: 200,
-              },
-              push: {
-                particles_nb: 4,
-              },
-              remove: {
-                particles_nb: 2,
-              },
-            },
-          },
-          retina_detect: true,
-          background: {
-            color: '#111',
-            image: '',
-            position: '50% 50%',
-            repeat: 'no-repeat',
-            size: 'cover',
-          },
-        }}
-      />
+    <div className='h-screen container mx-auto'>
+      <div class='mt-[100px]'>
+        <h4 className='text-xl font-medium text-rose-600'>Hello! Myself</h4>
+        <h2 className='text-6xl font-bold text-slate-900'>
+          Iraz Ramin Bayejid
+        </h2>
+        <h4 className='mt-10 text-3xl font-bold text-rose-600'>
+          Frontend Developer
+        </h4>
+        <p className='text-slate-900 text-[19px]'>WebDeveloper | Programmer</p>
+        <div className='flex mt-2'>
+          <p className='text-base'>Follow me -----</p>
+          <div className='ml-5 flex'>
+            <a
+              target='_blank'
+              href='https://github.com/irazramin'
+              className='text-2xl mx-2'
+              rel='noreferrer'
+            >
+              <FaGithub />
+            </a>
+            <a
+              target='_blank'
+              href='https://www.linkedin.com/in/irazraminb/'
+              className='text-2xl mx-2'
+              rel='noreferrer'
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+        <div className='mt-6'>
+          <button
+            type='button'
+            class='inline-block font-bold px-7 py-3 ml-0 mx-2 bg-rose-600 text-white  text-sm leading-snug uppercase rounded shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-rose-800 active:shadow-lg transition duration-150 ease-in-out'
+          >
+            Get Resume
+          </button>
+          <button
+            type='button'
+            class='inline-block font-bold px-7 py-3 mx-2 border-2 border-rose-500 text-rose-500  text-sm leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+          >
+            About me
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
