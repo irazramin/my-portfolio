@@ -4,17 +4,17 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 const Banner = () => {
      
   return (
-    <div className='h-screen container mx-auto'>
+    <div className='h-[80vh] w-[80%] mx-auto text-center lg:text-left'>
       <div class='mt-[100px]'>
         <h4 className='text-xl font-medium text-rose-600'>Hello! Myself</h4>
-        <h2 className='text-6xl font-bold text-slate-900'>
+        <h2 className='lg:text-6xl text-5xl  font-bold text-slate-900'>
           Iraz Ramin Bayejid
         </h2>
-        <h4 className='mt-10 text-3xl font-bold text-rose-600'>
+        <h4 className='lg:mt-10 mt-8 lg:text-3xl text-2xl font-bold text-rose-600'>
           Frontend Developer
         </h4>
-        <p className='text-slate-900 text-[19px]'>WebDeveloper | Programmer</p>
-        <div className='flex mt-2'>
+        <p className='text-slate-900 lg:text-[19px] text-base'>WebDeveloper | Programmer</p>
+        <div className='flex mt-2 lg:justify-start justify-center'>
           <p className='text-base'>Follow me -----</p>
           <div className='ml-5 flex'>
             <a
