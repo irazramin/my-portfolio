@@ -1,12 +1,15 @@
+import React from 'react';
 import facebook from "./assets/facebook.png";
 import github from "./assets/github.png";
 import linkedin from "./assets/linkedin.png";
 import twitter from "./assets/twitter.png";
 import Home from './Components/Pages/Home/Home';
 import Header from './Components/Shared/Header';
+
+
 function App() {
   return (
-    <div className='bg-stone-50'>
+    <div className={ 'bg-stone-50'}>
      <Header/>
      <Home/>
 

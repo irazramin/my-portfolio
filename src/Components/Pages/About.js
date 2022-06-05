@@ -6,7 +6,7 @@ const About = () => {
       <h2 className='text-center text-2xl font-bold'>
         <span className='text-rose-500'>About</span> me
       </h2>
-      <div className='grid lg:grid-cols-2 grid-cols-1 gap-1 mt-16'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 gap-1 mt-10'>
         <div className=''>
           <img
             src={myPic}
