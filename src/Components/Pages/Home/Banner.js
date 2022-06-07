@@ -1,19 +1,19 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-const Banner = () => {
-     
+const Banner = ({ modeOn }) => {
   return (
-    <div className='h-[80vh] w-[80%] mx-auto text-center lg:text-left'>
+    <div
+      id='home'
+      className='h-[80vh] w-[80%] mx-auto text-center lg:text-left duration-500'
+    >
       <div class='mt-[100px]'>
         <h4 className='text-xl font-medium text-rose-600'>Hello! Myself</h4>
-        <h2 className='lg:text-6xl text-5xl  font-bold text-slate-900'>
-          Iraz Ramin Bayejid
-        </h2>
+        <h2 className='lg:text-6xl text-5xl  font-bold '>Iraz Ramin Bayejid</h2>
         <h4 className='lg:mt-10 mt-8 lg:text-3xl text-2xl font-bold text-rose-600'>
           Frontend Developer
         </h4>
-        <p className='text-slate-900 lg:text-[19px] text-base'>WebDeveloper | Programmer</p>
+        <p className=' lg:text-[19px] text-base'>WebDeveloper | Programmer</p>
         <div className='flex mt-2 lg:justify-start justify-center'>
           <p className='text-base'>Follow me -----</p>
           <div className='ml-5 flex'>
@@ -42,16 +42,18 @@ const Banner = () => {
           >
             Get Resume
           </button>
-          <button
-            type='button'
-            class='inline-block font-bold px-7 py-3 mx-2 border-2 border-rose-500 text-rose-500  text-sm leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
-          >
-            About me
-          </button>
+          <a href='#about'>
+            <button
+              type='button'
+              class='inline-block font-bold px-7 py-3 mx-2 border-2 border-rose-500 text-rose-500  text-sm leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+            >
+              About me
+            </button>
+          </a>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Banner

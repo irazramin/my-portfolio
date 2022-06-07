@@ -3,14 +3,14 @@ import About from '../About'
 import Skills from '../Skills'
 import Banner from './Banner'
 
-const Home = () => {
+const Home = ({ modeOn }) => {
   return (
     <div>
-        <Banner/>
-        <About />
-        <Skills />
+      <Banner modeOn={modeOn}/>
+      <About />
+      <Skills modeOn={modeOn}/>
     </div>
-  )
-}
+  );
+};
 
 export default Home

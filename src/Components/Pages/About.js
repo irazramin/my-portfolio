@@ -2,7 +2,7 @@ import React from 'react';
 import myPic from '../../assets/my_pic.jpg';
 const About = () => {
   return (
-    <div className='w-[80%] mx-auto'>
+    <div id='about' className='w-[80%] mx-auto'>
       <h2 className='text-center text-2xl font-bold'>
         <span className='text-rose-500'>About</span> me
       </h2>
