@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { Typing } from 'react-typing';
 
 const Banner = ({ modeOn }) => {
   return (
@@ -9,7 +10,13 @@ const Banner = ({ modeOn }) => {
     >
       <div class='mt-[100px]'>
         <h4 className='text-xl font-medium text-rose-600'>Hello! Myself</h4>
-        <h2 className='lg:text-6xl text-5xl  font-bold '>Iraz Ramin Bayejid</h2>
+        <Typing key={500}>
+          {' '}
+          <h2 className='lg:text-6xl text-5xl  font-bold '>
+            Iraz Ramin Bayejid
+          </h2>
+        </Typing>
+
         <h4 className='lg:mt-10 mt-8 lg:text-3xl text-2xl font-bold text-rose-600'>
           Frontend Developer
         </h4>

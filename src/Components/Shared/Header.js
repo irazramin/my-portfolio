@@ -103,7 +103,10 @@ const Header = ({setModeOn,modeOn}) => {
                         type='checkbox'
                         role='switch'
                         id='flexSwitchCheckDefault'
-                        onChange={(e) => setModeOn(e.target.checked)}
+                        onChange={(e) => {
+                          setModeOn(e.target.checked);
+                          localStorage.setItem("modeOn",e.target.checked);
+                        }}
                       />
                       <label
                         class={`${

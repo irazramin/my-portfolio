@@ -8,14 +8,16 @@ import Header from './Components/Shared/Header';
 
 function App() {
   const [modeOn,setModeOn] = useState(false);
+  const modeOn1 = localStorage.getItem('modeOn');
+  
   return (
     <div
       className={`${
-        modeOn ? 'bg-slate-900 text-white' : 'bg-stone-50 text-slate-900'
+        modeOn1 === "true" ? 'bg-slate-900 text-white' : 'bg-stone-50 text-slate-900'
       }`}
     >
-      <Header setModeOn={setModeOn} modeOn={modeOn} />
-      <Home setModeOn={setModeOn} modeOn={modeOn} />
+      <Header setModeOn={setModeOn}  />
+      <Home setModeOn={setModeOn}  />
 
       <div className='bg-white p-2 shadow-lg fixed lg:left-5 rounded-lg top-[200px] border-b-4 border-rose-700'>
         <img className='my-5' src={facebook} alt='' />

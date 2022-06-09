@@ -110,7 +110,7 @@ const Skills = ({ modeOn }) => {
               <>
                 <div
                   className={`${
-                    modeOn ? 'bg-slate-700 text-white' : 'bg-zinc-100 text-slate-800'
+                    modeOn === 'true' ? 'bg-slate-700 text-white' : 'bg-zinc-100 text-slate-800'
                   }  h-[80px] relative flex flex-col justify-between rounded-md`}
                 >
                   <div className='px-5 pt-5 flex justify-between items-center'>
