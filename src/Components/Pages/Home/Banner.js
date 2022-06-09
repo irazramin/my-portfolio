@@ -47,7 +47,13 @@ const Banner = ({ modeOn }) => {
             type='button'
             class='inline-block font-bold px-7 py-3 ml-0 mx-2 bg-rose-600 text-white  text-sm leading-snug uppercase rounded shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-rose-800 active:shadow-lg transition duration-150 ease-in-out'
           >
-            Get Resume
+            <a
+              href='https://drive.google.com/file/d/1SzqUl9qFpPt_c-CUlNzfo2IGrQGkx1us/view?usp=sharing'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Get Resume
+            </a>
           </button>
           <a href='#about'>
             <button

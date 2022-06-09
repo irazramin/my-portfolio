@@ -3,10 +3,10 @@ import myPic from '../../assets/my_pic.jpg';
 const About = () => {
   return (
     <div id='about' className='w-[80%] mx-auto'>
-      <h2 className='text-center text-2xl font-bold'>
+      <h2 className='text-center text-2xl font-bold my-5'>
         <span className='text-rose-500'>About</span> me
       </h2>
-      <div className='grid lg:grid-cols-2 grid-cols-1 gap-1 mt-10'>
+      <div className='flex gap-10'>
         <div className=''>
           <img
             src={myPic}
@@ -14,15 +14,13 @@ const About = () => {
             alt=''
           />
         </div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-            temporibus facilis perferendis, eum sunt accusamus necessitatibus?
-            Temporibus architecto porro perferendis blanditiis nulla fugiat esse
-            odio! Inventore non, iste perferendis veniam quis assumenda dolorem
-            ad corporis voluptatibus minus vero accusamus, corrupti veritatis
-            saepe consequuntur a illo officiis reiciendis aut. Libero,
-            asperiores!
+        <div className='w-[500px] text-start'>
+          <p className='leading-8 text-lg font-medium'>
+            I'm a front-end developer who works with HTML, CSS, UI libraries
+            (Bootstrap5, TailwindCSS), JavaScript, ReactJS, NodeJS, MongoDB, and
+            ExpressJS with dedication and hardworking seeking good opportunities
+            to prove my skills, looking for a responsible position to gain
+            practical experience.
           </p>
         </div>
       </div>

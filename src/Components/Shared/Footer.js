@@ -1,8 +1,13 @@
 import React from 'react';
 
 const Footer = () => {
+  const modeOn = localStorage.getItem('modeOn')
   return (
-    <div class='text-center' style={{ backgroundColor: `rgba(0, 0, 0, 0.2)` }}>
+    <div
+      class={` ${
+        modeOn === 'true' ? 'bg-[rgba(0,0,0,0.3)]' : 'bg-[rgba(0,0,0,0.1)]'
+      }  'text-center'`}
+    >
       <div class='container pt-9 mx-auto'>
         <div class='flex justify-center mb-9 items-center text-center w-full '>
           <a

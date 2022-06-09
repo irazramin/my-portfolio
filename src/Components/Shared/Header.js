@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Header = ({setModeOn,modeOn}) => {
+const Header = ({setModeOn}) => {
+
+  const modeOn = localStorage.getItem('modeOn')
 
   return (
-    <div>
+    <div className={`${modeOn === 'true' ? 'text-white' : 'to-slate-900'}`}>
       <nav
         class='
                 relative
@@ -60,11 +62,7 @@ const Header = ({setModeOn,modeOn}) => {
               <ul class='navbar-nav flex flex-col pl-0 list-style-none ml-auto'>
                 <li class='nav-item px-2'>
                   <a
-                    class={`${
-                      modeOn
-                        ? 'text-white focus:text-gray-400'
-                        : 'text-slate-900 focus:'
-                    } nav-link`}
+                    class={` nav-link`}
                     aria-current='page'
                     href='#home'
                   >
@@ -73,26 +71,18 @@ const Header = ({setModeOn,modeOn}) => {
                 </li>
                 <li class='nav-item pr-2'>
                   <a
-                    class={`${
-                      modeOn
-                        ? 'text-white focus:text-gray-400'
-                        : 'text-slate-900 focus:'
-                    } nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0`}
-                    href='#'
+                    class={` p-0`}
+                    href='#about'
                   >
-                    Features
+                    About me
                   </a>
                 </li>
                 <li class='nav-item pr-2'>
                   <a
-                    class={`${
-                      modeOn
-                        ? 'text-white focus:text-gray-400'
-                        : 'text-slate-900 focus:'
-                    } nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0`}
-                    href='#'
+                    class={`nav-link  p-0`}
+                    href='#skill'
                   >
-                    Pricing
+                    Skills
                   </a>
                 </li>
                 <li>
@@ -109,11 +99,7 @@ const Header = ({setModeOn,modeOn}) => {
                         }}
                       />
                       <label
-                        class={`${
-                          modeOn
-                            ? 'text-white focus:text-gray-400'
-                            : 'text-slate-900 focus:'
-                        } 'form-check-label inline-block text-gray-800'`}
+                        class={` 'form-check-label inline-block'`}
                         for='flexSwitchCheckDefault'
                       >
                         Dark mode

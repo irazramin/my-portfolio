@@ -46,7 +46,7 @@ const Skills = ({ modeOn }) => {
   const [allSkills, setAllSkills] = useState(skills);
 
   return (
-    <div className='w-[80%] mx-auto my-28'>
+    <div className='w-[80%] mx-auto my-28' id='skill'>
       <h2 className='text-2xl font-bold uppercase text-center'>
         my <span className='text-rose-500'>Skills</span>
       </h2>
@@ -110,7 +110,9 @@ const Skills = ({ modeOn }) => {
               <>
                 <div
                   className={`${
-                    modeOn === 'true' ? 'bg-slate-700 text-white' : 'bg-zinc-100 text-slate-800'
+                    modeOn === 'true'
+                      ? 'bg-[rgba(0,0,0,0.3)]'
+                      : 'bg-[rgba(0,0,0,0.1)]'
                   }  h-[80px] relative flex flex-col justify-between rounded-md`}
                 >
                   <div className='px-5 pt-5 flex justify-between items-center'>
