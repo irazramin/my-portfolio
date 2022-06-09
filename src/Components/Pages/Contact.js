@@ -4,7 +4,7 @@ const Contact = () => {
     const modeOn = localStorage.getItem('modeOn');
   return (
     <>
-      <div className='my-20'>
+      <div className='my-20 mx-10'>
         <h2 className='text-center text-2xl font-bold my-5'>
           <span className='text-rose-500'>Contact</span> With me
         </h2>

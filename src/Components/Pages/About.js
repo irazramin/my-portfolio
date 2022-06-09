@@ -6,7 +6,7 @@ const About = () => {
       <h2 className='text-center text-2xl font-bold my-5'>
         <span className='text-rose-500'>About</span> me
       </h2>
-      <div className='flex gap-10'>
+      <div className='flex gap-10 lg:flex-row flex-col'>
         <div className=''>
           <img
             src={myPic}
@@ -14,7 +14,7 @@ const About = () => {
             alt=''
           />
         </div>
-        <div className='w-[500px] text-start'>
+        <div className='lg:w-[500px] text-start w-full mx-auto'>
           <p className='leading-8 text-lg font-medium'>
             I'm a front-end developer who works with HTML, CSS, UI libraries
             (Bootstrap5, TailwindCSS), JavaScript, ReactJS, NodeJS, MongoDB, and
