@@ -85,6 +85,14 @@ const Header = ({setModeOn}) => {
                     Skills
                   </a>
                 </li>
+                <li class='nav-item pr-2'>
+                  <a
+                    class={`nav-link  p-0`}
+                    href='#project'
+                  >
+                    Projects
+                  </a>
+                </li>
                 <li>
                   <div class='flex justify-center'>
                     <div class='form-check form-switch'>

@@ -75,7 +75,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className='w-[80%] mx-auto my-20'>
+    <div className='w-[80%] mx-auto my-20' id='project'>
       <h2 className='text-center text-2xl font-bold my-5'>
         My <span className='text-rose-500'>Project</span> 
       </h2>
@@ -103,16 +103,16 @@ const Projects = () => {
                   <h5 class='text-xl font-semibold mb-2'>
                     {project.projectName}
                   </h5>
-                  {/* <p class='text-sm mb-4'>
-                    {project.desc.length > 150
-                      ? project.desc.slice(0, 150)
+                  <p class='text-sm mb-4'>
+                    {project.desc.length > 80
+                      ? project.desc.slice(0, 80)
                       : project.desc}
-                  </p> */}
+                  </p>
                   {/* <p className='text-sm'><span className='text-rose-500 font-semibold'>Technologies: </span> {project.technologies}</p> */}
                   <div className='mt-5'>
                     <button
                       type='button'
-                      class='inline-block px-4 py-2 bg-rose-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 m-2 active:bg-rose-800 active:shadow-lg transition duration-150 ease-in-out'
+                      class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
                     >
                       <a
                         href={project.Links[0].frontend}
@@ -125,7 +125,7 @@ const Projects = () => {
                     {project?.Links[0].backend && (
                       <button
                         type='button'
-                        class='inline-block px-4 py-2 bg-rose-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 m-2 active:bg-rose-800 active:shadow-lg transition duration-150 ease-in-out'
+                        class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
                       >
                         <a
                           href={project.Links[0].backend}
@@ -138,7 +138,7 @@ const Projects = () => {
                     )}
                     <button
                       type='button'
-                      class='inline-block px-4 py-2 bg-rose-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-rose-700 hover:shadow-lg focus:bg-rose-700 focus:shadow-lg focus:outline-none focus:ring-0 m-2 active:bg-rose-800 active:shadow-lg transition duration-150 ease-in-out'
+                      class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
                     >
                       <a
                         href={project.Links[0].live}
