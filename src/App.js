@@ -21,13 +21,9 @@ function App() {
       }`}
     >
       <Header setModeOn={setModeOn} />
-      {/* <Home setModeOn={setModeOn} /> */}
+      <Home setModeOn={setModeOn} />
 
-      <Routes>
-        <Route path='/' element={<Home setModeOn={setModeOn}/>}></Route>
-        <Route path='/projectdetails:id' element={<ProjectDetails />}></Route>
-      </Routes>
-
+ 
       <div className='bg-white p-2 shadow-lg fixed lg:left-5 rounded-lg top-[200px] border-b-4 border-rose-700 lg:block hidden'>
         <img className='my-5' src={facebook} alt='' />
         <img className='my-5' src={twitter} alt='' />

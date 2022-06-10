@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react';
 const Projects = () => {
-    const modeOn = localStorage.getItem('modeOn')
-    const [projects,setProjects] = useState([]);
-    const [projectDetails,setProjectDetails] = useState([]);
+  const modeOn = localStorage.getItem('modeOn');
+  const [projects, setProjects] = useState([]);
+  const [projectDetails, setProjectDetails] = useState({});
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch('projects.json')
-    .then(res =>res.json())
-    .then(data => setProjects(data))
-  },[])
+      .then((res) => res.json())
+      .then((data) => setProjects(data));
+  }, []);
 
-const handleProjectDetails = (id) => {
-  console.log(id)
-    const projectsDetails = projects.find(project => project.id === id);
-    setProjectDetails(projectsDetails)
-    console.log(projectDetails.img.map((img) => img));
-};
+  const handleProjectDetails = (id) => {
+    console.log(id);
+    const projectsDetails = projects.find((project) => project.id === id);
+    setProjectDetails(projectsDetails);
+  };
+  console.log(projectDetails.Links);
   return (
     <div className='w-[80%] mx-auto my-20' id='project'>
       <h2 className='text-center text-2xl font-bold my-5'>
         My <span className='text-rose-500'>Project</span>
       </h2>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
-        {projects.map((project) => {
+        {projects?.map((project) => {
           return (
             <div class='flex justify-center'>
               <div
@@ -95,7 +95,7 @@ const handleProjectDetails = (id) => {
                       class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
                       data-bs-toggle='modal'
                       data-bs-target='#exampleModalLg'
-                      onClick={() => handleProjectDetails(project.id)}
+                      onClick={() => handleProjectDetails(project?.id)}
                     >
                       More
                     </button>
@@ -155,7 +155,7 @@ const handleProjectDetails = (id) => {
                 <small>{projectDetails.technologies}</small>
               </p>
 
-              <div className='mt-5'>
+              {projectDetails.Links && <div className='mt-5'>
                 <button
                   type='button'
                   class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
@@ -168,7 +168,7 @@ const handleProjectDetails = (id) => {
                     {projectDetails.Links[0].backend ? 'Frontend' : 'Github'}
                   </a>
                 </button>
-                {projectDetails?.Links[0].backend && (
+                {projectDetails.Links[0].backend && (
                   <button
                     type='button'
                     class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
@@ -194,7 +194,7 @@ const handleProjectDetails = (id) => {
                     live
                   </a>
                 </button>
-              </div>
+              </div>}
             </div>
           </div>
         </div>
