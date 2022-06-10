@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Header = ({setModeOn}) => {
 
   const modeOn = localStorage.getItem('modeOn')
@@ -68,6 +66,7 @@ const Header = ({setModeOn}) => {
                   >
                     Home
                   </a>
+                  
                 </li>
                 <li class='nav-item pr-2'>
                   <a

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "projectName": "Thermoparts House",
+    "desc": "This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.",
+    "Links": [
+      {
+        "frontend": "https://github.com/irazramin/Thermoparts-house",
+        "backend": "https://github.com/irazramin/Thermoparts-house-backend",
+        "live": "https://ac-manufacture.web.app/"
+      }
+    ],
+    "technologies": "ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication",
+    "img": [
+      "https://i.ibb.co/T2HDbD7/project1.jpg",
+      "https://i.ibb.co/cwy0qmF/project1-2.jpg",
+      "https://i.ibb.co/GW5X70P/project1-3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "projectName": "Perfumes Hut",
+    "desc": "This is a perfume based inventory system,where you will get variant types of perfumes.You can put your own product and deliver them and again restock products.",
+    "technologies": "ReactJs, NodeJs, MongoDB, TailwindCSS, Firebase Authentication",
+    "Links": [
+      {
+        "frontend": "https://github.com/irazramin/perfumeshut-",
+        "backend": "https://github.com/irazramin/Perfumeshuts-backend",
+        "live": "https://warehouse-client-side.web.app/"
+      }
+    ],
+    "img": [
+      "https://i.ibb.co/SKSnm5M/project2.jpg",
+      "https://i.ibb.co/TW3Gr5h/project2-2.jpg",
+      "https://i.ibb.co/GVHQM2m/project2-3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "projectName": "Weddography",
+    "desc": "A professional photographer who gives service to people. People can purchase different packages from the website. ",
+    "technologies": "ReactJs, React router, TailwindCSS, Firebase Authentication",
+    "Links": [
+      {
+        "frontend": "https://github.com/irazramin/Weddography",
+        "backend": "",
+        "live": "https://weddography-2e501.web.app/"
+      }
+    ],
+    "img": [
+      "https://i.ibb.co/8X0v1hj/project3.jpg",
+      "https://i.ibb.co/jr2KS0d/project3-2.jpg",
+      "https://i.ibb.co/MG4hwZX/project3-3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "projectName": "Thermoparts House",
+    "desc": "This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.",
+    "Links": [
+      {
+        "frontend": "https://github.com/irazramin/Thermoparts-house",
+        "backend": "https://github.com/irazramin/Thermoparts-house-backend",
+        "live": "https://ac-manufacture.web.app/"
+      }
+    ],
+    "technologies": "ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication",
+    "img": [
+      "https://i.ibb.co/T2HDbD7/project1.jpg",
+      "https://i.ibb.co/cwy0qmF/project1-2.jpg",
+      "https://i.ibb.co/GW5X70P/project1-3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "projectName": "Thermoparts House",
+    "desc": "This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.",
+    "Links": [
+      {
+        "frontend": "https://github.com/irazramin/Thermoparts-house",
+        "backend": "https://github.com/irazramin/Thermoparts-house-backend",
+        "live": "https://ac-manufacture.web.app/"
+      }
+    ],
+    "technologies": "ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication",
+    "img": [
+      "https://i.ibb.co/T2HDbD7/project1.jpg",
+      "https://i.ibb.co/cwy0qmF/project1-2.jpg",
+      "https://i.ibb.co/GW5X70P/project1-3.jpg"
+    ]
+  }
+]

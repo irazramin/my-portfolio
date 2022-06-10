@@ -1,83 +1,25 @@
-import React from 'react';
-
+import { useEffect, useState } from 'react';
 const Projects = () => {
     const modeOn = localStorage.getItem('modeOn')
-  const projects = [
-    {
-      projectName: 'Thermoparts House',
-      desc: 'This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.',
-      technologies:
-        'ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication',
-      Links: [
-        {
-          frontend: `https://github.com/irazramin/Thermoparts-house`,
-          backend: `https://github.com/irazramin/Thermoparts-house-backend`,
-          live: `https://ac-manufacture.web.app/`,
-        },
-      ],
-      img: `https://i.ibb.co/T2HDbD7/project1.jpg`,
-    },
-    {
-      projectName: 'Perfumes Hut',
-      desc: 'This is a perfume based inventory system,where you will get variant types of perfumes.You can put your own product and deliver them and again restock products.',
-      technologies:
-        'ReactJs, NodeJs, MongoDB, TailwindCSS, Firebase Authentication',
-      Links: [
-        {
-          frontend: `https://github.com/irazramin/perfumeshut-`,
-          backend: `https://github.com/irazramin/Perfumeshuts-backend`,
-          live: `https://warehouse-client-side.web.app/`,
-        },
-      ],
-      img: `https://i.ibb.co/SKSnm5M/project2.jpg`,
-    },
-    {
-      projectName: 'Weddography',
-      desc: 'A professional photographer who gives service to people. People can purchase different packages from the website. ',
-      technologies:
-        'ReactJs, React router, TailwindCSS, Firebase Authentication',
-      Links: [
-        {
-          frontend: `https://github.com/irazramin/Weddography`,
-          backend: ``,
-          live: `https://weddography-2e501.web.app/`,
-        },
-      ],
-      img: `https://i.ibb.co/8X0v1hj/project3.jpg`,
-    },
-    {
-      projectName: 'Thermoparts House',
-      desc: 'This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.',
-      technologies:
-        'ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication',
-      Links: [
-        {
-          frontend: `https://github.com/irazramin/Thermoparts-house`,
-          backend: `https://github.com/irazramin/Thermoparts-house-backend`,
-          live: `https://ac-manufacture.web.app/`,
-        },
-      ],
-      img: `https://i.ibb.co/T2HDbD7/project1.jpg`,
-    },
-    {
-      projectName: 'Thermoparts House',
-      desc: 'This website is made for, the customer can order all kinds of parts which is related to Air Conditions(AC). There are two-part to this website one is the normal user can order products and another one is admin. Admin can add new parts, order shipped, and delete products.',
-      technologies:
-        'ReactJs, NodeJs, MongoDB, TailwindCSS,  React query, Firebase Authentication',
-      Links: [
-        {
-          frontend: `https://github.com/irazramin/Thermoparts-house`,
-          backend: `https://github.com/irazramin/Thermoparts-house-backend`,
-          live: `https://ac-manufacture.web.app/`,
-        },
-      ],
-      img: `https://i.ibb.co/T2HDbD7/project1.jpg`,
-    },
-  ];
+    const [projects,setProjects] = useState([]);
+    const [projectDetails,setProjectDetails] = useState([]);
+
+  useEffect(() =>{
+    fetch('projects.json')
+    .then(res =>res.json())
+    .then(data => setProjects(data))
+  },[])
+
+const handleProjectDetails = (id) => {
+  console.log(id)
+    const projectsDetails = projects.find(project => project.id === id);
+    setProjectDetails(projectsDetails)
+    console.log(projectDetails.img.map((img) => img));
+};
   return (
     <div className='w-[80%] mx-auto my-20' id='project'>
       <h2 className='text-center text-2xl font-bold my-5'>
-        My <span className='text-rose-500'>Project</span> 
+        My <span className='text-rose-500'>Project</span>
       </h2>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
         {projects.map((project) => {
@@ -95,7 +37,7 @@ const Projects = () => {
                 >
                   <img
                     class='rounded-t-lg h-[200px] object-cover'
-                    src={project.img}
+                    src={project.img[0]}
                     alt=''
                   />
                 </a>
@@ -148,12 +90,102 @@ const Projects = () => {
                         live
                       </a>
                     </button>
+                    <button
+                      type='button'
+                      class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+                      data-bs-toggle='modal'
+                      data-bs-target='#exampleModalLg'
+                      onClick={() => handleProjectDetails(project.id)}
+                    >
+                      More
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           );
         })}
+      </div>
+
+      <div
+        class='modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto'
+        id='exampleModalLg'
+        tabindex='-1'
+        aria-labelledby='exampleModalLgLabel'
+        aria-modal='true'
+        role='dialog'
+      >
+        <div class='modal-dialog modal-lg relative w-auto pointer-events-none'>
+          <div class='modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current'>
+            <div class='modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md'>
+              <h5
+                class='text-xl font-medium leading-normal text-gray-800'
+                id='exampleModalLgLabel'
+              >
+                {projectDetails.projectName} Details
+              </h5>
+              <button
+                type='button'
+                class='btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline'
+                data-bs-dismiss='modal'
+                aria-label='Close'
+              ></button>
+            </div>
+            <div class='modal-body relative p-4'>
+              <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+                {projectDetails?.img?.map((img) => (
+                  <img src={img} alt='' />
+                ))}
+              </div>
+              <p className='mt-5'>{projectDetails.desc}</p>
+              <p className='mt-10'>
+                <span className='text-rose-500'> Technology used :</span>{' '}
+                <small>{projectDetails.technologies}</small>
+              </p>
+
+              <div className='mt-5'>
+                <button
+                  type='button'
+                  class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+                >
+                  <a
+                    href={projectDetails.Links[0].frontend}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {projectDetails.Links[0].backend ? 'Frontend' : 'Github'}
+                  </a>
+                </button>
+                {projectDetails?.Links[0].backend && (
+                  <button
+                    type='button'
+                    class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+                  >
+                    <a
+                      href={projectDetails.Links[0].backend}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      Backend
+                    </a>
+                  </button>
+                )}
+                <button
+                  type='button'
+                  class='inline-block m-2 px-2 py-1 border-2 border-rose-600 text-rose-600 font-medium text-xs leading-tight uppercase rounded-full hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+                >
+                  <a
+                    href={projectDetails.Links[0].live}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    live
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
