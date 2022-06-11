@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = ({setModeOn}) => {
 
   const modeOn = localStorage.getItem('modeOn')
@@ -59,38 +61,33 @@ const Header = ({setModeOn}) => {
               </a>
               <ul class='navbar-nav flex flex-col pl-0 list-style-none ml-auto'>
                 <li class='nav-item px-2'>
-                  <a
+                  {/* <a
+                  path='/'
                     class={` nav-link`}
                     aria-current='page'
                     href='#home'
                   >
                     Home
-                  </a>
-                  
+                  </a> */}
+                  <Link to='/'>Home</Link>
                 </li>
                 <li class='nav-item pr-2'>
-                  <a
-                    class={` p-0`}
-                    href='#about'
-                  >
+                  <a class={` p-0`} href='#about'>
                     About me
                   </a>
                 </li>
                 <li class='nav-item pr-2'>
-                  <a
-                    class={`nav-link  p-0`}
-                    href='#skill'
-                  >
+                  <a class={`nav-link  p-0`} href='#skill'>
                     Skills
                   </a>
                 </li>
                 <li class='nav-item pr-2'>
-                  <a
-                    class={`nav-link  p-0`}
-                    href='#project'
-                  >
+                  <a class={`nav-link  p-0`} href='#project'>
                     Projects
                   </a>
+                </li>
+                <li className="mx-2">
+                  <Link to='/blog'>Blogs</Link>
                 </li>
                 <li>
                   <div class='flex justify-center'>
@@ -102,7 +99,7 @@ const Header = ({setModeOn}) => {
                         id='flexSwitchCheckDefault'
                         onChange={(e) => {
                           setModeOn(e.target.checked);
-                          localStorage.setItem("modeOn",e.target.checked);
+                          localStorage.setItem('modeOn', e.target.checked);
                         }}
                       />
                       <label
